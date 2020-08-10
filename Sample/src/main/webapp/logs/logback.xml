@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <configuration>
+	<property name="LOGS" value="./logs"></property>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+     encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default 
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+ 
+ 	<appender name="File" class="ch.qos.logback.core.FileAppender">
+ 	<file>venom.log</file>
+ 	<encoder>
+ 	<pattern>%d [%thread] %-5level %-40logger{40} - %msg%n</pattern>
+ 	</encoder>
+ 	</appender>
+ 
+   <appender name="RfAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+  <file>${LOGS}/webapp.log</file>
+  <encoder>
+  <pattern>%d %p %C{1.} [%t] %m%n
+  </pattern>
+  </encoder>
+  
+  <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+  	<fileNamePattern>${LOGS}/archived/webapp-%d{yyy-MM-dd}.%i.log
+  	</fileNamePattern>
+  	  <maxHistory>30</maxHistory>
+  	  </rollingPolicy>
+  </appender>
+	<logger name="com.Society.automated.allwork" level="trace"></logger>
+   <root level="info">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="File" />
+  </root> 
+    <logger name="com.Society.automated.allwork" level="info">
+  <appender-ref ref="STDOUT" /> 
+  <appender-ref ref="RfAppender"/>
+  </logger> 
+</configuration> -->
+
+<configuration>
+   <property name="home" value="d:/logs"></property>
+ 
+   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+         <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+      </encoder>
+   </appender>
+ 
+   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+      <file>./logs/logback.log </file>
+      <append>true</append>
+      <encoder>
+         <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+      </encoder>
+   </appender>
+ 
+ 	<!-- <logger name="testbite" level="DEBUG" additivity="false">
+      <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+</logger> -->
+   <root level="debug">
+   	<appender-ref ref="FILE" />
+      <appender-ref ref="STDOUT" />
+   </root>
+ 
+</configuration>

@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+/* ADMINLOGIN JSP */
+
+body{
+	height:100vh;
+	background-image: url("img/dub5.jpg");
+}
+
+.check{ /* CARD CLASS */
+	border:none;
+	margin:15%;	
+}
+
+.chead{
+	background: grey;
+}
+
+.yup{
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.nope{
+	text-align: center;
+}
+
+.c1{
+	display: flex;
+	background: grey;
+	justify-content: flex-end;
+}
+
+.i1{
+	margin:10px;
+}
+
+.dip{
+	min-height:1px;
+	margin-bottom:1rem;
+}
+
+.bull:hover{
+	text-decoration:none;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 991px)
+{
+	.yup{
+		padding:0;
+	}
+
+}
+@media(min-width: 992px) and (max-width: 1200px)
+{
+	.yup{
+		padding-left:15%;
+		padding-right: 15%;
+	}
+
+}
+
+/* END ADMIN LOGIN */
